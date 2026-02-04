@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { HeroContent } from '@/types';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
@@ -25,6 +26,20 @@ export default function Hero({ content }: HeroProps) {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/image (9).jpg"
+          alt="Space background"
+          fill
+          className="object-cover opacity-30"
+          priority
+          quality={90}
+        />
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+      </div>
+
       {/* Particle Background */}
       <ParticleBackground />
 
