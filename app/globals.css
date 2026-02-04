@@ -1,10 +1,42 @@
 @import "tailwindcss";
 
+/* Theme Variables */
+:root {
+  --bg-primary: rgb(15 23 42);
+  --bg-secondary: rgb(30 41 59);
+  --bg-tertiary: rgb(51 65 85);
+  --text-primary: rgb(255 255 255);
+  --text-secondary: rgb(156 163 175);
+  --accent-red: rgb(239 68 68);
+  --accent-green: rgb(34 197 94);
+}
+
+.light {
+  --bg-primary: rgb(241 245 249);
+  --bg-secondary: rgb(226 232 240);
+  --bg-tertiary: rgb(203 213 225);
+  --text-primary: rgb(15 23 42);
+  --text-secondary: rgb(71 85 105);
+  --accent-red: rgb(239 68 68);
+  --accent-green: rgb(34 197 94);
+}
+
+.mars {
+  --bg-primary: rgb(76 29 29);
+  --bg-secondary: rgb(124 45 18);
+  --bg-tertiary: rgb(153 27 27);
+  --text-primary: rgb(255 255 255);
+  --text-secondary: rgb(253 186 116);
+  --accent-red: rgb(255 107 53);
+  --accent-green: rgb(255 215 0);
+}
+
 /* Base styles */
 body {
-  background: linear-gradient(to bottom right, rgb(15 23 42), rgb(30 41 59), rgb(51 65 85));
-  color: white;
+  background: linear-gradient(to bottom right, var(--bg-primary), var(--bg-secondary), var(--bg-tertiary));
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 html {
@@ -26,6 +58,24 @@ html {
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
+}
+
+.glass-effect-enhanced {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-glow {
+  box-shadow: 0 0 10px rgba(255, 71, 87, 0.5),
+              0 0 20px rgba(255, 71, 87, 0.3),
+              0 0 30px rgba(255, 71, 87, 0.2);
+}
+
+.neon-glow-green {
+  box-shadow: 0 0 10px rgba(46, 213, 115, 0.5),
+              0 0 20px rgba(46, 213, 115, 0.3),
+              0 0 30px rgba(46, 213, 115, 0.2);
 }
 
 .hover-lift {
@@ -106,4 +156,15 @@ html {
 
 .animate-glow {
   animation: glow 2s ease-in-out infinite;
+}
+
+/* Accessibility: Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

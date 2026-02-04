@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,13 +37,15 @@ export default function Navigation() {
                 {link.name}
               </Link>
             ))}
+            <ThemeToggle />
             <button className="btn-primary text-base px-6 py-2">
               Buy Now
             </button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
