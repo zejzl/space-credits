@@ -12,6 +12,7 @@ export default function Navigation() {
     { name: 'About', href: '/about' },
     { name: 'Mission', href: '/mission' },
     { name: 'Whitepaper', href: '/whitepaper' },
+    { name: 'News', href: '/news' },
   ];
 
   return (

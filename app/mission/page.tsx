@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import FeatureList from '@/components/FeatureList';
+import UseCases from '@/components/features/UseCases';
 import { content } from '@/data/content';
 
 export const metadata: Metadata = {
@@ -28,6 +29,9 @@ export default function MissionPage() {
         title="What Makes Space Credits Special"
         description="Built for the future of interplanetary commerce"
       />
+
+      {/* Use Cases */}
+      <UseCases />
 
       {/* Roadmap teaser */}
       <section className="section-container">

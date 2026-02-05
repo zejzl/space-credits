@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import WhitepaperChapters from '@/components/WhitepaperChapters';
+import DetailedTokenomics from '@/components/features/DetailedTokenomics';
 import { content } from '@/data/content';
 
 export const metadata: Metadata = {
@@ -26,6 +27,9 @@ export default function WhitepaperPage() {
       <WhitepaperChapters
         chapters={content.whitepaper.chapters}
       />
+
+      {/* Detailed Tokenomics */}
+      <DetailedTokenomics />
 
       {/* Executive Summary */}
       <section className="section-container">

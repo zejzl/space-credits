@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import AboutSection from '@/components/AboutSection';
 import StatsGrid from '@/components/StatsGrid';
+import OurStory from '@/components/features/OurStory';
+import UseCases from '@/components/features/UseCases';
 import { content } from '@/data/content';
 
 export const metadata: Metadata = {
@@ -23,6 +25,8 @@ export default function AboutPage() {
 
       <AboutSection content={content.about} />
       <StatsGrid stats={content.stats} />
+      <OurStory />
+      <UseCases />
       
       {/* Additional info */}
       <section className="section-container">
