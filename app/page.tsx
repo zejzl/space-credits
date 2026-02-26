@@ -17,7 +17,7 @@ const TokenomicsChart = dynamic(() => import('@/components/features/TokenomicsCh
   ssr: false
 });
 
-const TOKEN_ADDRESS = 'SpACE1234567890YourTokenAddressHere';
+const TOKEN_ADDRESS = 'B7Wz6HcG3XoYEqPUYmLu97gHMk4xifVRr6J3bJZ9u9Aj';
 
 export default function Home() {
   return (
