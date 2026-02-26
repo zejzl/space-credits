@@ -120,16 +120,16 @@ export const content: ContentData = {
           "GOVERNANCE: Space Credits operates as a DAO (Decentralized Autonomous Organization). Every SPACE holder can vote on proposals proportional to their staked balance. Governance covers: protocol upgrades, treasury allocations, partnership approvals, meme contest winners, and the eventual Mars Reserve deployment plan. One token, one vote. No delegation to insiders. No shadow governance. The community decides everything.",
           "RANKS AND RECOGNITION: Space Cadets earn ranks based on contribution, not just holdings. Recruit (hold SPACE) -> Cadet (participate in governance) -> Pilot (contribute code or content) -> Commander (lead community initiatives) -> Admiral (core contributor status). Ranks are recorded on-chain as non-transferable badges and unlock access to exclusive channels, early feature access, and increased governance weight.",
           "THE MEME TREASURY: 2% of total supply is dedicated to rewarding the best content creators in the community. Monthly meme contests with SPACE prizes. Annual Space Credits Meme Olympics with live voting. Community-curated meme archive preserved on Arweave for permanent storage. The best memes of our generation, immortalized on a permanent blockchain. As it should be.",
-          "JOIN THE MISSION: Twitter/X (@spacecredits), Telegram (t.me/spacecredits), Discord (discord.gg/spacecredits). We don't promise financial returns. We promise the most entertaining ride to Mars you'll ever experience. Buckle up, Cadet."
+          "JOIN THE MISSION: Twitter/X (@spacecredits), Telegram (t.me/space_credits), Discord (discord.gg/qf7abu3H). We don't promise financial returns. We promise the most entertaining ride to Mars you'll ever experience. Buckle up, Cadet."
         ]
       }
     ]
   },
   
   socialLinks: [
-    { name: "Twitter", url: "https://twitter.com/spacecredits", icon: "X" },
-    { name: "Telegram", url: "https://t.me/spacecredits", icon: "TG" },
-    { name: "Discord", url: "https://discord.gg/spacecredits", icon: "DC" },
+    { name: "Twitter", url: "https://x.com/spacecredits", icon: "X" },
+    { name: "Telegram", url: "https://t.me/space_credits", icon: "TG" },
+    { name: "Discord", url: "https://discord.gg/qf7abu3H", icon: "DC" },
     { name: "Dextools", url: "#", icon: "DX" }
   ],
   
