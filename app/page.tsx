@@ -50,6 +50,10 @@ export default function Home() {
                 label="Copy Address"
                 className="btn-primary mx-auto"
               />
+              <div className="flex gap-4 justify-center mt-4">
+                <a href={`https://solscan.io/token/${TOKEN_ADDRESS}`} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-[#00f0ff]/60 hover:text-[#00f0ff] transition-colors">[Solscan]</a>
+                <a href="https://app.meteora.ag/dlmm/87RFq18hiF3yacpsY9pken13mS9QCE6sLeqnssj2pXdX" target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-[#00f0ff]/60 hover:text-[#00f0ff] transition-colors">[Trade on Meteora]</a>
+              </div>
             </div>
           </div>
         </div>
@@ -77,9 +81,11 @@ export default function Home() {
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               Join thousands of space enthusiasts who believe in the future of interplanetary commerce.
             </p>
-            <button className="btn-primary text-lg">
-              GET SPACE CREDITS NOW
-            </button>
+            <a href="https://app.meteora.ag/dlmm/87RFq18hiF3yacpsY9pken13mS9QCE6sLeqnssj2pXdX" target="_blank" rel="noopener noreferrer">
+              <button className="btn-primary text-lg">
+                GET SPACE CREDITS NOW
+              </button>
+            </a>
           </div>
         </div>
       </section>

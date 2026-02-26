@@ -6,7 +6,7 @@ export const content: ContentData = {
     tagline: "Your gains are not affected by gravity",
     description: "The cryptocurrency that's going to Mars with Elon. Built on Solana for lightning-fast interplanetary transactions.",
     ctaButtons: {
-      primary: { text: "Buy Space Credits", href: "#", variant: 'primary' },
+      primary: { text: "Buy Space Credits", href: "https://app.meteora.ag/dlmm/87RFq18hiF3yacpsY9pken13mS9QCE6sLeqnssj2pXdX", variant: 'primary' },
       secondary: { text: "Read Whitepaper", href: "/whitepaper", variant: 'secondary' }
     }
   },
