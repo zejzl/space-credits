@@ -44,9 +44,11 @@ export default function Navigation() {
             <div className="ml-2">
               <ThemeToggle />
             </div>
-            <button className="btn-primary text-xs px-5 py-2 ml-2">
-              BUY NOW
-            </button>
+            <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=B7Wz6HcG3XoYEqPUYmLu97gHMk4xifVRr6J3bJZ9u9Aj" target="_blank" rel="noopener noreferrer">
+              <button className="btn-primary text-xs px-5 py-2 ml-2">
+                BUY NOW
+              </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -98,9 +100,11 @@ export default function Navigation() {
                 {link.name}
               </Link>
             ))}
-            <button className="btn-primary w-full text-xs mt-4">
-              BUY NOW
-            </button>
+            <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=B7Wz6HcG3XoYEqPUYmLu97gHMk4xifVRr6J3bJZ9u9Aj" target="_blank" rel="noopener noreferrer">
+              <button className="btn-primary w-full text-xs mt-4">
+                BUY NOW
+              </button>
+            </a>
           </div>
         </div>
       )}
