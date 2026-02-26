@@ -130,7 +130,7 @@ export const content: ContentData = {
     { name: "Twitter", url: "https://x.com/spacecredits", icon: "X" },
     { name: "Telegram", url: "https://t.me/space_credits", icon: "TG" },
     { name: "Discord", url: "https://discord.gg/qf7abu3H", icon: "DC" },
-    { name: "Dextools", url: "#", icon: "DX" }
+    { name: "Dextools", url: "https://www.dextools.io/app/solana/pair-explorer/87RFq18hiF3yacpsY9pken13mS9QCE6sLeqnssj2pXdX", icon: "DX" }
   ],
   
   copyright: "// 2026 Space Credits - To Mars and Beyond"
