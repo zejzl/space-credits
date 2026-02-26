@@ -1,0 +1,12 @@
+{
+  "name": "Space Credits",
+  "symbol": "SPACE",
+  "description": "The first cryptocurrency designed for interplanetary commerce. Your gains are not affected by gravity.",
+  "image": "https://space-credits.com/logo.jpg",
+  "external_url": "https://space-credits.com",
+  "attributes": [],
+  "properties": {
+    "category": "currency",
+    "creators": []
+  }
+}
