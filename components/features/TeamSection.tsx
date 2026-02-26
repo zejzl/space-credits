@@ -10,17 +10,17 @@ export default function TeamSection() {
     <section className="section-container">
       <ScrollReveal variants={fadeInUp}>
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Meet the Crew 👨‍🚀
+          <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4">
+            Meet the Crew
           </h2>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl text-gray-400">
             Anonymous astronauts on a mission to Mars
           </p>
         </div>
       </ScrollReveal>
 
       <motion.div
-        className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+        className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -29,33 +29,42 @@ export default function TeamSection() {
         {teamData.map((member, index) => (
           <ScrollReveal key={index} variants={fadeInUp} delay={index * 0.1}>
             <motion.div
-              className="glass-effect-enhanced rounded-2xl p-6 text-center group"
-              whileHover={{ y: -10 }}
+              className="terminal-card group"
+              whileHover={{ y: -8 }}
               transition={{ duration: 0.3 }}
             >
-              {/* Avatar */}
-              <motion.div
-                className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-500 to-purple-600 flex items-center justify-center text-5xl"
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.6 }}
-              >
-                {member.emoji}
-              </motion.div>
-
-              {/* Name */}
-              <h3 className="text-xl font-bold mb-2 group-hover:text-red-400 transition-colors">
-                {member.name}
-              </h3>
-
-              {/* Role */}
-              <div className="text-sm text-green-400 font-semibold mb-3 uppercase tracking-wider">
-                {member.role}
+              <div className="terminal-header">
+                <span className="terminal-dot terminal-dot-red" />
+                <span className="terminal-dot terminal-dot-yellow" />
+                <span className="terminal-dot terminal-dot-green" />
+                <span className="ml-2">crew_{String(index).padStart(2, '0')}</span>
               </div>
 
-              {/* Bio */}
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {member.bio}
-              </p>
+              <div className="p-6 text-center">
+                {/* Avatar */}
+                <motion.div
+                  className="w-20 h-20 mx-auto mb-4 border border-[#00f0ff]/30 flex items-center justify-center font-mono text-xl font-bold text-[#00f0ff] group-hover:border-[#00f0ff] group-hover:shadow-[0_0_20px_rgba(0,240,255,0.15)] transition-all"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {member.emoji}
+                </motion.div>
+
+                {/* Name */}
+                <h3 className="text-lg font-mono font-bold mb-2 group-hover:text-[#00f0ff] transition-colors">
+                  {member.name}
+                </h3>
+
+                {/* Role */}
+                <div className="text-xs text-[#ff9500] font-mono font-semibold mb-3 uppercase tracking-widest">
+                  {member.role}
+                </div>
+
+                {/* Bio */}
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {member.bio}
+                </p>
+              </div>
             </motion.div>
           </ScrollReveal>
         ))}

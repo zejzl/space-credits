@@ -4,7 +4,7 @@ export const content: ContentData = {
   hero: {
     title: "Space Credits",
     tagline: "Your gains are not affected by gravity",
-    description: "The cryptocurrency that's going to Mars with Elon",
+    description: "The cryptocurrency that's going to Mars with Elon. Built on Solana for lightning-fast interplanetary transactions.",
     ctaButtons: {
       primary: { text: "Buy Space Credits", href: "#", variant: 'primary' },
       secondary: { text: "Read Whitepaper", href: "/whitepaper", variant: 'secondary' }
@@ -12,10 +12,10 @@ export const content: ContentData = {
   },
   
   stats: [
-    { value: "420,691,337", label: "Max Supply", icon: "🚀" },
-    { value: "100%", label: "Community Owned", icon: "🤝" },
-    { value: "Solana", label: "Blockchain", icon: "⚡" },
-    { value: "Mars", label: "Destination", icon: "🔴" }
+    { value: "420,691,337", label: "Max Supply", icon: "[>]" },
+    { value: "100%", label: "Community Owned", icon: "[*]" },
+    { value: "Solana", label: "Blockchain", icon: "[~]" },
+    { value: "Mars", label: "Destination", icon: "[+]" }
   ],
   
   about: {
@@ -25,27 +25,27 @@ export const content: ContentData = {
   
   mission: {
     title: "Our Mission",
-    description: "To create the world's first space-ready cryptocurrency that will be used for commerce on Mars and beyond. We're not just going to the moon—we're going all the way to Mars.",
+    description: "To create the world's first space-ready cryptocurrency that will be used for commerce on Mars and beyond. We're not just going to the moon -- we're going all the way to Mars.",
     features: [
       {
         title: "Zero Gravity Trading",
         description: "Trade freely across planets without the weight of traditional finance. Our decentralized system works anywhere in the solar system with internet connectivity.",
-        icon: "🌌"
+        icon: "[VOID]"
       },
       {
         title: "Mars-Ready Infrastructure",
         description: "Built for the future of space commerce. When the first Mars colony launches, Space Credits will be ready to power its economy.",
-        icon: "🔴"
+        icon: "[MARS]"
       },
       {
         title: "Lightning Fast Transactions",
         description: "Powered by Solana's high-performance blockchain. Transactions settle in seconds, not minutes.",
-        icon: "⚡"
+        icon: "[FAST]"
       },
       {
         title: "Meme-Optimized Supply",
-        description: "420,691,337 tokens. The supply is no accident—it's 420 + 69 + 1337, the holy trinity of internet culture.",
-        icon: "🎯"
+        description: "420,691,337 tokens. The supply is no accident -- it's 420 + 69 + 1337, the holy trinity of internet culture.",
+        icon: "[LEET]"
       }
     ]
   },
@@ -82,11 +82,11 @@ export const content: ContentData = {
   },
   
   socialLinks: [
-    { name: "Twitter", url: "https://twitter.com/spacecredits", icon: "𝕏" },
-    { name: "Telegram", url: "https://t.me/spacecredits", icon: "✈️" },
-    { name: "Discord", url: "https://discord.gg/spacecredits", icon: "💬" },
-    { name: "Dextools", url: "#", icon: "📊" }
+    { name: "Twitter", url: "https://twitter.com/spacecredits", icon: "X" },
+    { name: "Telegram", url: "https://t.me/spacecredits", icon: "TG" },
+    { name: "Discord", url: "https://discord.gg/spacecredits", icon: "DC" },
+    { name: "Dextools", url: "#", icon: "DX" }
   ],
   
-  copyright: "© 2026 Space Credits - To Mars and Beyond! 🚀"
+  copyright: "// 2026 Space Credits - To Mars and Beyond"
 };

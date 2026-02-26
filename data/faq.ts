@@ -10,7 +10,7 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "How do I buy Space Credits?",
-    answer: "You can buy Space Credits on decentralized exchanges like Raydium or Jupiter. Simply connect your Solana wallet, swap SOL for Space Credits, and prepare for liftoff! 🚀"
+    answer: "You can buy Space Credits on decentralized exchanges like Raydium or Jupiter. Simply connect your Solana wallet, swap SOL for Space Credits, and prepare for liftoff."
   },
   {
     question: "What makes Space Credits different?",
@@ -22,10 +22,10 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "Is there a roadmap?",
-    answer: "Absolutely! We're planning major milestones including exchange listings, NFT launches, metaverse integration, and eventually establishing the first crypto accepted on Mars. Check our roadmap section for details!"
+    answer: "Absolutely. We're planning major milestones including exchange listings, NFT launches, metaverse integration, and eventually establishing the first crypto accepted on Mars. Check our roadmap section for details."
   },
   {
     question: "How can I join the community?",
-    answer: "Join our Telegram and follow us on Twitter! Our community of space enthusiasts and crypto believers is always welcoming new astronauts. Together we're heading to the moon... and beyond!"
+    answer: "Join our Telegram and follow us on Twitter. Our community of space enthusiasts and crypto believers is always welcoming new astronauts. Together we're heading to Mars and beyond."
   }
 ];

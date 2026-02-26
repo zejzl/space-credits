@@ -26,28 +26,28 @@ export default function ThemeToggle() {
     }
   };
 
-  const getThemeIcon = () => {
+  const getThemeLabel = () => {
     switch (theme) {
       case 'dark':
-        return '🌙';
+        return 'DRK';
       case 'light':
-        return '☀️';
+        return 'LGT';
       case 'mars':
-        return '🔴';
+        return 'MRS';
       default:
-        return '🌙';
+        return 'DRK';
     }
   };
 
   return (
     <motion.button
       onClick={cycleTheme}
-      className="p-2 rounded-lg glass-effect hover:neon-glow transition-all"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
+      className="p-2 border border-[#00f0ff]/20 hover:border-[#00f0ff]/50 transition-all font-mono text-xs text-[#00f0ff] tracking-wider"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       title={`Current theme: ${theme}`}
     >
-      <span className="text-2xl">{getThemeIcon()}</span>
+      [{getThemeLabel()}]
     </motion.button>
   );
 }

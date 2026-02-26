@@ -7,7 +7,7 @@ export default function Loading() {
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
         <motion.div
-          className="text-8xl mb-8"
+          className="text-6xl mb-8 font-mono"
           animate={{
             y: [0, -20, 0],
             rotate: [0, 5, -5, 0]
@@ -18,10 +18,10 @@ export default function Loading() {
             ease: 'easeInOut'
           }}
         >
-          🚀
+          [&gt;_]
         </motion.div>
         <motion.h2
-          className="text-2xl font-bold mb-4"
+          className="text-2xl font-mono font-bold mb-4 text-[#00f0ff]"
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{
             duration: 1.5,
@@ -35,7 +35,7 @@ export default function Loading() {
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
-              className="w-3 h-3 rounded-full bg-red-500"
+              className="w-3 h-3 bg-[#00f0ff]"
               animate={{
                 scale: [1, 1.5, 1],
                 opacity: [0.3, 1, 0.3]

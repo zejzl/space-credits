@@ -11,57 +11,53 @@ export default function WhitepaperChapters({ chapters, title }: WhitepaperChapte
       {/* Title */}
       {title && (
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-mono font-bold text-white mb-4">
             {title}
           </h2>
-          <p className="text-xl text-gray-400">
-            Read our comprehensive whitepaper
+          <p className="text-xl text-gray-400 font-mono text-sm tracking-wider">
+            // Read our comprehensive whitepaper
           </p>
         </div>
       )}
 
       {/* Chapters */}
-      <div className="max-w-4xl mx-auto space-y-6">
+      <div className="max-w-4xl mx-auto space-y-4">
         {chapters.map((chapter) => (
           <div
             key={chapter.number}
-            className="glass-effect rounded-xl p-8 border border-white/10 hover:translate-x-3 transition-transform duration-300 cursor-pointer group"
+            className="terminal-card hover:translate-x-2 transition-transform duration-300 cursor-pointer group"
           >
-            <div className="flex items-start space-x-6">
-              {/* Chapter number */}
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span className="text-2xl font-black text-white">
-                    {chapter.number}
-                  </span>
+            <div className="terminal-header">
+              <span className="terminal-dot terminal-dot-red" />
+              <span className="terminal-dot terminal-dot-yellow" />
+              <span className="terminal-dot terminal-dot-green" />
+              <span className="ml-2">chapter_{String(chapter.number).padStart(2, '0')}.md</span>
+            </div>
+            <div className="p-6">
+              <div className="flex items-start space-x-6">
+                {/* Chapter number */}
+                <div className="flex-shrink-0">
+                  <div className="w-14 h-14 border border-[#00f0ff]/30 flex items-center justify-center group-hover:border-[#00f0ff] group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all">
+                    <span className="text-xl font-mono font-bold text-[#00f0ff]">
+                      {String(chapter.number).padStart(2, '0')}
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              {/* Chapter content */}
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
-                  {chapter.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {chapter.description}
-                </p>
-              </div>
+                {/* Chapter content */}
+                <div className="flex-1">
+                  <h3 className="text-xl font-mono font-bold text-white mb-2 group-hover:text-[#00f0ff] transition-colors">
+                    {chapter.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    {chapter.description}
+                  </p>
+                </div>
 
-              {/* Arrow indicator */}
-              <div className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
-                <svg
-                  className="w-6 h-6 text-secondary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
+                {/* Arrow indicator */}
+                <div className="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity font-mono text-[#00f0ff]">
+                  {'>>'}
+                </div>
               </div>
             </div>
           </div>

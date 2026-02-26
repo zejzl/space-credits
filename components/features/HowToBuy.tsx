@@ -9,25 +9,25 @@ const steps = [
     number: 1,
     title: "Get a Solana Wallet",
     description: "Download Phantom or Solflare wallet. It's like a space suit for your crypto!",
-    emoji: "👛"
+    icon: "[WALLET]"
   },
   {
     number: 2,
     title: "Buy Some SOL",
     description: "Purchase SOL from any exchange and transfer it to your wallet.",
-    emoji: "💰"
+    icon: "[SOL]"
   },
   {
     number: 3,
     title: "Connect to DEX",
     description: "Visit Raydium or Jupiter and connect your wallet. The launchpad is ready!",
-    emoji: "🔗"
+    icon: "[DEX]"
   },
   {
     number: 4,
     title: "Swap for Space Credits",
     description: "Exchange SOL for Space Credits and join the mission to Mars!",
-    emoji: "🚀"
+    icon: "[SWAP]"
   }
 ];
 
@@ -36,10 +36,10 @@ export default function HowToBuy() {
     <section className="section-container">
       <ScrollReveal variants={fadeInUp}>
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            How to Buy 🛒
+          <h2 className="text-4xl md:text-5xl font-mono font-bold mb-4">
+            How to Buy
           </h2>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl text-gray-400">
             Four simple steps to join the space economy
           </p>
         </div>
@@ -55,31 +55,36 @@ export default function HowToBuy() {
         {steps.map((step, index) => (
           <ScrollReveal key={step.number} variants={fadeInUp} delay={index * 0.1}>
             <motion.div
-              className="glass-effect-enhanced rounded-2xl p-6 text-center relative overflow-hidden group"
-              whileHover={{ scale: 1.05, y: -10 }}
+              className="terminal-card relative overflow-hidden group"
+              whileHover={{ scale: 1.03, y: -8 }}
               transition={{ duration: 0.3 }}
             >
-              {/* Step Number Badge */}
-              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-red-500 flex items-center justify-center font-bold text-sm">
-                {step.number}
+              <div className="terminal-header">
+                <span className="terminal-dot terminal-dot-red" />
+                <span className="terminal-dot terminal-dot-yellow" />
+                <span className="terminal-dot terminal-dot-green" />
+                <span className="ml-2">step_{String(step.number).padStart(2, '0')}</span>
               </div>
 
-              {/* Emoji */}
-              <motion.div
-                className="text-6xl mb-4"
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                transition={{ duration: 0.3 }}
-              >
-                {step.emoji}
-              </motion.div>
+              <div className="p-6 text-center">
+                {/* Step Number Badge */}
+                <div className="absolute top-2 right-3 font-mono text-xs text-[#00f0ff]/30">
+                  {String(step.number).padStart(2, '0')}
+                </div>
 
-              {/* Title */}
-              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                {/* Icon */}
+                <div className="font-mono text-lg mb-4 text-[#00f0ff]">
+                  {step.icon}
+                </div>
 
-              {/* Description */}
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {step.description}
-              </p>
+                {/* Title */}
+                <h3 className="text-lg font-mono font-bold mb-3">{step.title}</h3>
+
+                {/* Description */}
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
 
               {/* Hover glow */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none neon-glow" />
@@ -96,7 +101,7 @@ export default function HowToBuy() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Buy Now on Raydium →
+            BUY NOW ON RAYDIUM
           </motion.button>
         </div>
       </ScrollReveal>

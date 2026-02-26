@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -7,7 +7,16 @@ import PageTransition from "@/components/effects/PageTransition";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://spacecredits.com'),
@@ -59,10 +68,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className={`${spaceMono.variable} ${outfit.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ef4444" />
+        <meta name="theme-color" content="#00f0ff" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="apple-touch-icon" href="/icon-192.png" />
@@ -84,23 +93,25 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${outfit.className}`}>
         <ThemeProvider>
           <Toaster
             position="top-center"
             toastOptions={{
               duration: 3000,
               style: {
-                background: 'rgba(30, 30, 46, 0.95)',
-                color: '#fff',
-                border: '1px solid rgba(255, 71, 87, 0.3)',
-                borderRadius: '12px',
-                backdropFilter: 'blur(10px)'
+                background: 'rgba(10, 14, 26, 0.95)',
+                color: '#00f0ff',
+                border: '1px solid rgba(0, 240, 255, 0.3)',
+                borderRadius: '0',
+                backdropFilter: 'blur(10px)',
+                fontFamily: 'var(--font-space-mono), monospace',
+                fontSize: '0.875rem',
               },
               success: {
                 iconTheme: {
-                  primary: '#2ed573',
-                  secondary: '#fff'
+                  primary: '#00f0ff',
+                  secondary: '#0a0e1a'
                 }
               }
             }}

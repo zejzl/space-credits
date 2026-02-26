@@ -22,12 +22,11 @@ export default function ParticleBackground() {
         value: 'transparent'
       }
     },
-    fpsLimit: 120,
+    fpsLimit: 60,
     interactivity: {
       events: {
         onClick: {
-          enable: true,
-          mode: 'push'
+          enable: false,
         },
         onHover: {
           enable: true,
@@ -35,34 +34,27 @@ export default function ParticleBackground() {
         }
       },
       modes: {
-        push: {
-          quantity: 4
-        },
         repulse: {
-          distance: 100,
+          distance: 80,
           duration: 0.4
         }
       }
     },
     particles: {
       color: {
-        value: ['#ff4757', '#2ed573', '#ffa502', '#5352ed']
+        value: ['#00f0ff', '#ff9500', '#7c3aed', '#ffffff']
       },
       links: {
-        color: '#ffffff',
-        distance: 150,
-        enable: true,
-        opacity: 0.1,
-        width: 1
+        enable: false
       },
       move: {
         direction: 'none',
         enable: true,
         outModes: {
-          default: 'bounce'
+          default: 'out'
         },
-        random: false,
-        speed: 1,
+        random: true,
+        speed: 0.3,
         straight: false
       },
       number: {
@@ -71,16 +63,21 @@ export default function ParticleBackground() {
           width: 1920,
           height: 1080
         },
-        value: typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 100
+        value: typeof window !== 'undefined' && window.innerWidth < 768 ? 40 : 80
       },
       opacity: {
-        value: 0.5
+        value: { min: 0.1, max: 0.5 },
+        animation: {
+          enable: true,
+          speed: 0.5,
+          sync: false
+        }
       },
       shape: {
         type: 'circle'
       },
       size: {
-        value: { min: 1, max: 3 }
+        value: { min: 0.5, max: 1.5 }
       }
     },
     detectRetina: true,

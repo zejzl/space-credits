@@ -19,20 +19,17 @@ export default function CopyButton({ text, label = 'Copy', className = '' }: Cop
       await navigator.clipboard.writeText(text);
       setCopied(true);
 
-      // Confetti celebration
       confetti({
         particleCount: 100,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#ff4757', '#2ed573', '#ffa502', '#5352ed']
+        colors: ['#00f0ff', '#ff9500', '#7c3aed', '#ffffff']
       });
 
-      // Toast notification
-      toast.success('Copied to clipboard! 🚀');
+      toast.success('Copied to clipboard');
 
-      // Reset after 2 seconds
       setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
+    } catch {
       toast.error('Failed to copy');
     }
   };
@@ -40,12 +37,12 @@ export default function CopyButton({ text, label = 'Copy', className = '' }: Cop
   return (
     <motion.button
       onClick={handleCopy}
-      className={`relative px-6 py-3 rounded-full font-bold text-white transition-all ${className}`}
+      className={`relative px-6 py-3 font-mono font-bold text-sm tracking-wider transition-all ${className}`}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       data-testid="copy-button"
     >
-      {copied ? '✓ Copied!' : label}
+      {copied ? '[COPIED]' : label}
     </motion.button>
   );
 }

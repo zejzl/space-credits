@@ -10,7 +10,6 @@ interface StatsGridProps {
   stats: Stat[];
 }
 
-// Helper function to extract numeric value from stat.value string
 function parseStatValue(value: string): { number: number; suffix: string } {
   const match = value.match(/^([\d,]+)(.*)$/);
   if (match) {
@@ -38,37 +37,43 @@ export default function StatsGrid({ stats }: StatsGridProps) {
           return (
             <ScrollReveal key={index} variants={scaleIn} delay={index * 0.1}>
               <motion.div
-                className="glass-effect-enhanced card-border p-8 text-center group relative overflow-hidden"
-                whileHover={{ scale: 1.05, y: -5 }}
+                className="terminal-card p-0 text-center group relative overflow-hidden"
+                whileHover={{ scale: 1.03, y: -5 }}
                 transition={{ duration: 0.3 }}
               >
-                {/* Icon */}
-                {stat.icon && (
-                  <motion.div
-                    className="text-5xl mb-4"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {stat.icon}
-                  </motion.div>
-                )}
+                {/* Terminal header */}
+                <div className="terminal-header">
+                  <span className="terminal-dot terminal-dot-red" />
+                  <span className="terminal-dot terminal-dot-yellow" />
+                  <span className="terminal-dot terminal-dot-green" />
+                  <span className="ml-2 opacity-60">{stat.label}</span>
+                </div>
 
-                {/* Value with animation */}
-                <h3 className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:neon-glow transition-all">
-                  {hasNumber ? (
-                    <AnimatedCounter end={number} suffix={suffix} />
-                  ) : (
-                    stat.value
+                <div className="p-6">
+                  {/* Icon as text symbol */}
+                  {stat.icon && (
+                    <div className="font-mono text-2xl mb-3 text-[#00f0ff]/60">
+                      {stat.icon}
+                    </div>
                   )}
-                </h3>
 
-                {/* Label */}
-                <p className="text-gray-400 font-semibold uppercase text-sm tracking-wider">
-                  {stat.label}
-                </p>
+                  {/* Value */}
+                  <h3 className="text-3xl md:text-4xl font-mono font-bold text-white mb-2">
+                    {hasNumber ? (
+                      <AnimatedCounter end={number} suffix={suffix} />
+                    ) : (
+                      <span className="text-[#00f0ff]">{stat.value}</span>
+                    )}
+                  </h3>
 
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none neon-glow" />
+                  {/* Label */}
+                  <p className="text-gray-500 font-mono uppercase text-xs tracking-widest">
+                    {stat.label}
+                  </p>
+                </div>
+
+                {/* Hover glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none neon-glow" />
               </motion.div>
             </ScrollReveal>
           );
