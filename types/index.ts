@@ -16,6 +16,7 @@ export interface Chapter {
   number: number;
   title: string;
   description: string;
+  content?: string[];
 }
 
 export interface SocialLink {
