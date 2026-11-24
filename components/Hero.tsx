@@ -41,17 +41,30 @@ function TypingText({ text }: { text: string }) {
 export default function Hero({ content }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-      {/* Background Image */}
+      {/* Background: poster first (LCP, reduced motion), video loop on top */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/image (9).jpg"
-          alt="Space background"
+          src="/images/hero-poster.jpg"
+          alt=""
           fill
-          className="object-cover opacity-20"
+          sizes="100vw"
+          className="object-cover opacity-50"
           priority
-          quality={90}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e1a]/80 via-[#0a0e1a]/50 to-[#0a0e1a]/80" />
+        <video
+          className="absolute inset-0 h-full w-full object-cover opacity-50 motion-reduce:hidden"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/images/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/video/hero-loop-seamless.webm" type="video/webm" />
+          <source src="/video/hero-loop-seamless.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e1a]/70 via-[#0a0e1a]/30 to-[#0a0e1a]/90" />
       </div>
 
       {/* Particle Background */}
