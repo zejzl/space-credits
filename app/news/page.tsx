@@ -128,7 +128,7 @@ export default function NewsPage() {
         {/* No articles message */}
         {filteredArticles.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-500 font-mono">// No articles found in this category.</p>
+            <p className="text-gray-500 font-mono">{"// No articles found in this category."}</p>
           </div>
         )}
       </section>

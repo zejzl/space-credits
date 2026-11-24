@@ -89,7 +89,7 @@ export default function Hero({ content }: HeroProps) {
           variants={fadeInUp}
         >
           <span className="font-mono text-xs tracking-[0.3em] text-[#00f0ff]/60 uppercase">
-            // Mission Designation: SPACE-001
+            {"// Mission Designation: SPACE-001"}
           </span>
         </motion.div>
 

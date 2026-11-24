@@ -69,7 +69,7 @@ export default function FAQSection() {
 
       <ScrollReveal variants={fadeInUp} delay={0.3}>
         <div className="text-center mt-12">
-          <p className="text-gray-500 mb-4 font-mono text-sm">// Still have questions?</p>
+          <p className="text-gray-500 mb-4 font-mono text-sm">{"// Still have questions?"}</p>
           <motion.button
             className="btn-secondary"
             whileHover={{ scale: 1.05 }}

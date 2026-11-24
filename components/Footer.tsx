@@ -27,7 +27,7 @@ export default function Footer() {
           {/* Quick links */}
           <div>
             <h4 className="text-[#00f0ff]/60 font-mono text-xs tracking-widest uppercase mb-4">
-              // Navigation
+              {"// Navigation"}
             </h4>
             <ul className="space-y-2">
               {['/', '/about', '/mission', '/whitepaper'].map((href) => (
@@ -44,7 +44,7 @@ export default function Footer() {
           {/* Social links */}
           <div>
             <h4 className="text-[#00f0ff]/60 font-mono text-xs tracking-widest uppercase mb-4">
-              // Comms Channel
+              {"// Comms Channel"}
             </h4>
             <div className="flex flex-wrap gap-3">
               {content.socialLinks.map((social) => (

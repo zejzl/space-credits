@@ -31,7 +31,7 @@ export default function PriceTicker() {
       </div>
       <div className="p-8 text-center">
         <div className="text-gray-500 text-xs font-mono uppercase tracking-widest mb-3">
-          // Live Price Feed
+          {"// Live Price Feed"}
         </div>
         <AnimatePresence mode="wait">
           <motion.div
