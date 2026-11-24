@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import PageTransition from "@/components/effects/PageTransition";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { Toaster } from "react-hot-toast";
+import { SITE_URL, SOCIAL_URLS } from "@/utils/site";
 
 const spaceMono = Space_Mono({
   subsets: ["latin"],
@@ -19,7 +20,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://spacecredits.com'),
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: './' },
   title: {
     default: "Space Credits - Your gains are not affected by gravity",
     template: "%s | Space Credits"
@@ -32,11 +34,12 @@ export const metadata: Metadata = {
     title: "Space Credits - To Mars and Beyond",
     description: "The cryptocurrency that's not affected by gravity. Join us on the journey to Mars!",
     type: "website",
+    url: "./",
     locale: "en_US",
     siteName: "Space Credits",
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Space Credits - Cryptocurrency for Mars and Beyond'
@@ -47,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Space Credits - To Mars and Beyond",
     description: "The cryptocurrency that's not affected by gravity. Join us on the journey to Mars!",
-    images: ['/og-image.png']
+    images: ['/og-image.jpg']
   },
   robots: {
     index: true,
@@ -72,7 +75,7 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#00f0ff" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="apple-touch-icon" href="/icon-192.png" />
         <script
@@ -83,12 +86,9 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Space Credits",
               "description": "The first cryptocurrency designed for interplanetary commerce",
-              "url": "https://spacecredits.com",
-              "logo": "https://spacecredits.com/logo.png",
-              "sameAs": [
-                "https://twitter.com/spacecredits",
-                "https://t.me/spacecredits"
-              ]
+              "url": SITE_URL,
+              "logo": `${SITE_URL}/logo.jpg`,
+              "sameAs": SOCIAL_URLS
             })
           }}
         />

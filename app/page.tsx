@@ -40,7 +40,7 @@ export default function Home() {
             </div>
             <div className="p-8 text-center flex flex-col justify-center">
               <div className="text-gray-500 text-xs font-mono uppercase tracking-widest mb-4">
-                // Contract Address
+                {"// Contract Address"}
               </div>
               <div className="mb-4 font-mono text-xs text-gray-300 break-all px-4 bg-[#0a0e1a] p-3 border border-[#00f0ff]/10">
                 {TOKEN_ADDRESS}

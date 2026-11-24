@@ -10,7 +10,8 @@ interface UseAnimatedCounterProps {
 }
 
 export function useAnimatedCounter({ end, duration = 2000, decimals = 0 }: UseAnimatedCounterProps) {
-  const [count, setCount] = useState(0);
+  // null until the animation starts, so the server HTML carries the real value
+  const [count, setCount] = useState<number | null>(null);
   const { ref, inView } = useInView({
     threshold: 0.3,
     triggerOnce: true
@@ -41,9 +42,10 @@ export function useAnimatedCounter({ end, duration = 2000, decimals = 0 }: UseAn
     requestAnimationFrame(animate);
   }, [inView, end, duration]);
 
+  const value = count ?? end;
   const formattedCount = decimals > 0
-    ? count.toFixed(decimals)
-    : Math.floor(count).toLocaleString();
+    ? value.toFixed(decimals)
+    : Math.floor(value).toLocaleString('en-US');
 
   return { ref, count: formattedCount };
 }

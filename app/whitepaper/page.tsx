@@ -53,7 +53,7 @@ export default function WhitepaperPage() {
                   Built on Solana for speed and efficiency, Space Credits features a fixed supply of 420,691,337 tokens (a perfect combination of internet culture: 420 + 69 + 1337). This ensures scarcity while providing enough supply for global - and eventually interplanetary - adoption.
                 </p>
                 <p>
-                  Our roadmap includes partnerships with space technology companies, integration with future Mars infrastructure, and community-driven development. Space Credits isn't just a memecoin - it's the currency of humanity's multi-planetary future.
+                  Our roadmap includes partnerships with space technology companies, integration with future Mars infrastructure, and community-driven development. Space Credits isn&apos;t just a memecoin - it&apos;s the currency of humanity&apos;s multi-planetary future.
                 </p>
               </div>
 

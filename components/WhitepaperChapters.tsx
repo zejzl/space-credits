@@ -24,7 +24,7 @@ export default function WhitepaperChapters({ chapters, title }: WhitepaperChapte
             {title}
           </h2>
           <p className="text-xl text-gray-400 font-mono text-sm tracking-wider">
-            // Read our comprehensive whitepaper
+            {"// Read our comprehensive whitepaper"}
           </p>
         </div>
       )}
@@ -129,7 +129,7 @@ export default function WhitepaperChapters({ chapters, title }: WhitepaperChapte
                           );
                         })}
                         <div className="font-mono text-xs text-[#00f0ff]/30 mt-6 pt-4 border-t border-[#00f0ff]/10">
-                          // end of chapter {String(chapter.number).padStart(2, '0')}
+                          {"// end of chapter "}{String(chapter.number).padStart(2, '0')}
                         </div>
                       </div>
                     </div>

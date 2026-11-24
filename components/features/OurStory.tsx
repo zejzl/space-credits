@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import ScrollReveal from '@/components/effects/ScrollReveal';
 import { fadeInUp, fadeInLeft, fadeInRight } from '@/utils/animations';
 
@@ -33,7 +32,7 @@ export default function OurStory() {
               <div>
                 <h3 className="text-2xl font-mono font-bold mb-3">The Beginning</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  It started as a joke in a crypto Discord server: "What if we made a memecoin for Mars?" But as we kept talking, the idea grew more serious. Humanity IS going to Mars. SpaceX is building Starship. NASA has Mars missions planned. Private companies are racing to space.
+                  It started as a joke in a crypto Discord server: &quot;What if we made a memecoin for Mars?&quot; But as we kept talking, the idea grew more serious. Humanity IS going to Mars. SpaceX is building Starship. NASA has Mars missions planned. Private companies are racing to space.
                 </p>
                 <p className="text-gray-300 leading-relaxed mt-4">
                   Someone will need to figure out interplanetary commerce. Why not us? Why not now?
@@ -57,7 +56,7 @@ export default function OurStory() {
               <div>
                 <h3 className="text-2xl font-mono font-bold mb-3">The Vision Takes Shape</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  We researched everything: Solana's speed, blockchain in space, latency between planets (3-22 minutes!), what early Mars colonists would need. We realized this could actually work—not just as a meme, but as real infrastructure.
+                  We researched everything: Solana&apos;s speed, blockchain in space, latency between planets (3-22 minutes!), what early Mars colonists would need. We realized this could actually work—not just as a meme, but as real infrastructure.
                 </p>
                 <p className="text-gray-300 leading-relaxed mt-4">
                   Space Credits was born: a cryptocurrency designed for a multi-planetary civilization, starting today on Earth, ready for Mars tomorrow.
@@ -105,13 +104,13 @@ export default function OurStory() {
               <div>
                 <h3 className="text-2xl font-mono font-bold mb-3">The Future (You Are Here)</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  This is where you come in. We're building partnerships with space companies, integrating with metaverse projects, and preparing for the day when humans actually need interplanetary currency.
+                  This is where you come in. We&apos;re building partnerships with space companies, integrating with metaverse projects, and preparing for the day when humans actually need interplanetary currency.
                 </p>
                 <p className="text-gray-300 leading-relaxed mt-4">
                   It might sound crazy. So did Bitcoin in 2009. So did going to the Moon in 1961. The craziest ideas become reality when enough people believe.
                 </p>
                 <p className="text-gray-300 leading-relaxed mt-4 font-mono font-bold text-[#00f0ff]">
-                  Join us. Let's make Space Credits the official currency of Mars.
+                  Join us. Let&apos;s make Space Credits the official currency of Mars.
                 </p>
               </div>
             </div>

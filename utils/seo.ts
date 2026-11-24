@@ -1,3 +1,5 @@
+import { SITE_URL, SOCIAL_URLS } from '@/utils/site';
+
 export interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'Article';
   name?: string;
@@ -18,12 +20,9 @@ export function generateStructuredData(props: StructuredDataProps) {
       ...baseData,
       name: props.name || 'Space Credits',
       description: props.description || 'The first cryptocurrency designed for interplanetary commerce',
-      url: props.url || 'https://spacecredits.com',
-      logo: props.logo || 'https://spacecredits.com/logo.png',
-      sameAs: props.sameAs || [
-        'https://twitter.com/spacecredits',
-        'https://t.me/spacecredits'
-      ]
+      url: props.url || SITE_URL,
+      logo: props.logo || `${SITE_URL}/logo.jpg`,
+      sameAs: props.sameAs || SOCIAL_URLS
     };
   }
 
@@ -31,7 +30,7 @@ export function generateStructuredData(props: StructuredDataProps) {
     return {
       ...baseData,
       name: props.name || 'Space Credits',
-      url: props.url || 'https://spacecredits.com',
+      url: props.url || SITE_URL,
       description: props.description || 'Your gains are not affected by gravity'
     };
   }
@@ -42,8 +41,8 @@ export function generateStructuredData(props: StructuredDataProps) {
 export function generateMetaTags({
   title = 'Space Credits - Your gains are not affected by gravity',
   description = 'The first cryptocurrency designed for interplanetary commerce. Built on Solana for Mars and beyond.',
-  image = '/og-image.png',
-  url = 'https://spacecredits.com'
+  image = '/og-image.jpg',
+  url = SITE_URL
 } = {}) {
   return {
     title,

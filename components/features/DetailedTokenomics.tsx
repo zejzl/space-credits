@@ -194,7 +194,7 @@ export default function DetailedTokenomics() {
             </div>
 
             <p className="text-center text-gray-500 mt-6 text-sm font-mono">
-              // Team tokens vest over 12 months to ensure long-term commitment
+              {"// Team tokens vest over 12 months to ensure long-term commitment"}
             </p>
           </div>
         </div>
